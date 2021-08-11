@@ -1,0 +1,96 @@
+* {
+    margin-right: 0;
+    margin-left: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.ocean {
+    height: 220px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.water {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    animation: water 10s linear infinite;
+}
+
+@keyframes water {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(1000px);
+    }
+}
+
+.boat {
+    width: 350px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.boat img {
+    width: 100%;
+    -webkit-box-reflect: below 0 linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6));
+    animation: boat 2s linear infinite;
+}
+
+@keyframes boat {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+    25% {
+        transform: rotate(-1deg) translateY(-3px);
+    }
+    50% {
+        transform: rotate(0deg) translateY(5px);
+    }
+    75% {
+        transform: rotate(1deg) translateY(-3px);
+    }
+    100% {
+        transform: rotate(0deg) translateY(-1px);
+    }
+}
+
+.title {
+    color: antiquewhite;
+    font-size: 22px;
+    font-family: sans-serif;
+    margin-left: 30px;
+}
+
+.cloud {
+    height: 250px;
+    position: absolute;
+    right: 0;
+    animation: cloud 10s linear infinite;
+}
+
+@keyframes cloud {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(500px);
+    }
+}
